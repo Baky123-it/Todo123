@@ -7,7 +7,7 @@ def test (request):
 def third(request):
     return render (request, "test3.html")
 
-
+  
 
 
 
