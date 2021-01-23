@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main.views import  test, third, homepage
+from templates.views import test4,test5,test6
 
 
 urlpatterns = [
@@ -23,4 +24,5 @@ urlpatterns = [
     path ("test/", test, name="test"),
     path ("test3/", third),
     path ("index/", homepage),
+    path ("test/", homepage1),
 ]
