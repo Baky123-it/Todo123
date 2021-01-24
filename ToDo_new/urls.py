@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from main.views import  test, third, homepage
 from templates.views import test4,test5,test6
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -24,5 +26,7 @@ urlpatterns = [
     path ("test/", test, name="test"),
     path ("test3/", third),
     path ("index/", homepage),
-    path ("test/", homepage1),
+    path ("test/", homepage1)
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+    + static(settings.MEDIA_URL, document_root=setings.MEDIA_ROOT)
 ]
